@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/toolBar"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:background="@color/teal_200">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="LocalEye"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"/>
+        
+        <ImageView
+            android:id="@+id/imgLogout"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/logout"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolBar"
+        tools:listitem="@layout/item_user_row"
+        android:id="@+id/userRV"
+        android:layout_marginTop="4dp"/>
+
+</RelativeLayout>
